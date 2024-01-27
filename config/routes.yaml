@@ -1,3 +1,8 @@
 controllers:
-    resource: ../src/Controller/
-    type: attribute
+  resource: ../src/Controller/
+  type: attribute
+# config/routes.yaml
+
+liste:
+  path: /liste
+  controller: App\Controller\TitleController::liste
