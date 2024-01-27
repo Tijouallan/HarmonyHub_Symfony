@@ -19,8 +19,7 @@ class Title
     private ?string $title = null;
 
     #[ORM\ManyToOne(targetEntity: Artist::class, inversedBy: 'titles')]
-    #[ORM\Column(length: 255)]
-    private ?string $artist = null;
+    private ?Artist $artist = null;
 
     #[ORM\Column(length: 255)]
     private ?string $tags = null;
@@ -51,10 +50,9 @@ class Title
         return $this->artist;
     }
 
-    public function setArtist(string $artist): static
+    public function setArtist(?Artist $artist): static
     {
         $this->artist = $artist;
-
         return $this;
     }
 
